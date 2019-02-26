@@ -1,0 +1,12 @@
+{
+  "name": "@etalab/api-geocode",
+  "version": "0.0.0",
+  "description": "HTTP API for advanced geocoding",
+  "repository": "git@github.com:etalab/api-geocode.git",
+  "author": "Jérôme Desboeufs <jerome.desboeufs@data.gouv.fr>",
+  "license": "MIT",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  }
+}
