@@ -10,11 +10,19 @@
     "access": "public"
   },
   "scripts": {
+    "lint": "xo",
     "start": "node server"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.16.4",
     "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "xo": "^0.24.0"
+  },
+  "xo": {
+    "semicolon": false,
+    "space": 2
   }
 }
