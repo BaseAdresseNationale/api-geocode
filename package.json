@@ -19,6 +19,7 @@
     "cors": "^2.8.5",
     "csv-parser": "^2.1.0",
     "csv-write-stream": "^2.0.0",
+    "dotenv": "^8.2.0",
     "express": "^4.16.4",
     "get-stream": "^4.1.0",
     "iconv-lite": "^0.4.24",
