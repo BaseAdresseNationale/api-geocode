@@ -17,19 +17,19 @@
     "addok-geocode-stream": "^0.5.0",
     "content-disposition": "^0.5.3",
     "cors": "^2.8.5",
-    "csv-parser": "^2.1.0",
+    "csv-parser": "^2.3.2",
     "csv-write-stream": "^2.0.0",
     "dotenv": "^8.2.0",
-    "express": "^4.16.4",
-    "get-stream": "^4.1.0",
-    "iconv-lite": "^0.4.24",
-    "into-stream": "^4.0.0",
+    "express": "^4.17.1",
+    "get-stream": "^5.1.0",
+    "iconv-lite": "^0.5.0",
+    "into-stream": "^5.1.1",
     "jschardet-french": "^0.0.1",
-    "lodash": "^4.17.11",
+    "lodash": "^4.17.15",
     "morgan": "^1.9.1",
-    "multer": "^1.4.1",
-    "pumpify": "^1.5.1",
-    "strip-bom-buf": "^1.0.0"
+    "multer": "^1.4.2",
+    "pumpify": "^2.0.1",
+    "strip-bom-buf": "^2.0.0"
   },
   "devDependencies": {
     "xo": "^0.24.0"
