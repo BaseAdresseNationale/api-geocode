@@ -32,11 +32,14 @@
     "strip-bom-buf": "^2.0.0"
   },
   "devDependencies": {
-    "xo": "^0.24.0"
+    "xo": "^0.25.3"
   },
   "xo": {
     "semicolon": false,
-    "space": 2
+    "space": 2,
+    "rules": {
+      "unicorn/prefer-string-slice": "off"
+    }
   },
   "engines": {
     "node": ">= 10"
