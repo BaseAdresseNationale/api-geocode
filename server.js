@@ -34,6 +34,13 @@ function logFinished(obj) {
 }
 
 app.post('/search/csv', upload.single('data'), (req, res) => {
+  if (!req.file) {
+    return res.status(400).send({
+      code: 400,
+      message: 'A CSV file must be provided in data field'
+    })
+  }
+
   const {originalName} = req.file
   const geocodeOptions = req.body ? {
     columns: ensureArray(req.body.columns),
