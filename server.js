@@ -63,9 +63,11 @@ app.post('/search/csv', upload.single('data'), (req, res) => {
       return res.status(500).send({code: 500, message: err.message})
     }
 
+    const resultFileName = originalName ? 'geocoded-' + originalName : 'geocoded.csv'
+
     res
       .type('csv')
-      .set('Content-Disposition', contentDisposition('geocoded-' + originalName))
+      .set('Content-Disposition', contentDisposition(resultFileName))
 
     pipeline(geocodedStream, res, err => {
       if (err) {
