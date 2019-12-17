@@ -160,10 +160,10 @@ acorn@^7.1.0:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.1.0.tgz#949d36f2c292535da602283586c2477c57eb2d6c"
   integrity sha512-kL5CuoXA/dgxlBbVrflsflzQ3PAas7RYZB52NOm/6839iVYJgKMJ3cQJD+t2i5+qFa8h3MDpEOJiS64E8JLnSQ==
 
-addok-geocode-stream@^0.8.0:
-  version "0.8.0"
-  resolved "https://registry.yarnpkg.com/addok-geocode-stream/-/addok-geocode-stream-0.8.0.tgz#a4c18557aa210328380d42ddb7b3e301d3a6aae8"
-  integrity sha512-b45EWNaQMqBxIGcEHpOLJtQicSCs0iV+vmJ4pyGkM515tqBpUY9Lo4wihRUqHFu9gk6O3iKi5yKqQlKznkQAbw==
+addok-geocode-stream@^0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/addok-geocode-stream/-/addok-geocode-stream-0.8.1.tgz#a90e7732f25dc4df7220b37dd60b35a52ab21b68"
+  integrity sha512-exMF9JaK863IiyCYTFv7lifN6MMh4UpOB3y4DnZILU4QMuDQ8/dl46yEu/BzSYUSsvJB3R8Yxj9jFji8x3G2LQ==
   dependencies:
     csv-parser "^2.3.2"
     csv-write-stream "^2.0.0"
