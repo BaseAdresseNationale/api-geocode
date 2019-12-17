@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 const {pipeline} = require('stream')
 const {uniqueId} = require('lodash')
 const express = require('express')
