@@ -47,7 +47,8 @@ app.post('/search/csv', upload.single('data'), (req, res) => {
   const geocodeOptions = req.body ? {
     columns: ensureArray(req.body.columns),
     citycode: req.body.citycode,
-    postcode: req.body.postcode
+    postcode: req.body.postcode,
+    resultColumns: ensureArray(req.body.result_columns)
   } : {}
 
   const logObject = {
