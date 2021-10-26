@@ -2357,6 +2357,11 @@ jschardet-french@^0.0.1:
   resolved "https://registry.yarnpkg.com/jschardet-french/-/jschardet-french-0.0.1.tgz#4881d2168d99653931bd5e5a2d48a94b42201e43"
   integrity sha512-27NXHpYg8dqIiIS4a8u9LDqtepi56NZ4MpgphVfbWOgN50pnEjcb1OX9zUaF7djXbTom55r0kXKiS82nrVtYTg==
 
+jschardet@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/jschardet/-/jschardet-3.0.0.tgz#898d2332e45ebabbdb6bf2feece9feea9a99e882"
+  integrity sha512-lJH6tJ77V8Nzd5QWRkFYCLc13a3vADkh3r/Fi8HupZGWk2OVVDfnZP8V/VgQgZ+lzW0kG2UGb5hFgt3V3ndotQ==
+
 json-buffer@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/json-buffer/-/json-buffer-3.0.0.tgz#5b1f397afc75d677bde8bcfc0e47e1f9a3d9a898"
