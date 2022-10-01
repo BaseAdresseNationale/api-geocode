@@ -1,7 +1,7 @@
 /* eslint import/no-unassigned-import: off */
 import 'dotenv/config.js'
 
-import {pipeline} from 'node:stream'
+import {pipeline} from 'node:stream/promises'
 import process from 'node:process'
 
 import {uniqueId} from 'lodash-es'
@@ -12,6 +12,7 @@ import multer from 'multer'
 import contentDisposition from 'content-disposition'
 
 import {geocodeCsvFile} from './lib/geocode-csv.js'
+import w from './lib/w.js'
 
 const app = express()
 const upload = multer()
@@ -39,7 +40,7 @@ function logFinished(obj) {
   }
 }
 
-app.post('/search/csv', upload.single('data'), (req, res) => {
+app.post('/search/csv', upload.single('data'), w(async (req, res) => {
   if (!req.file) {
     return res.status(400).send({
       code: 400,
@@ -65,35 +66,32 @@ app.post('/search/csv', upload.single('data'), (req, res) => {
 
   console.log(JSON.stringify(logObject))
 
-  geocodeCsvFile(req.file.buffer, geocodeOptions, (err, geocodedStream) => {
-    if (err) {
-      return res.status(500).send({code: 500, message: err.message})
-    }
+  const geocodedStream = geocodeCsvFile(req.file.buffer, geocodeOptions)
 
-    const resultFileName = originalName ? 'geocoded-' + originalName : 'geocoded.csv'
+  const resultFileName = originalName ? 'geocoded-' + originalName : 'geocoded.csv'
 
-    res
-      .type('csv')
-      .set('Content-Disposition', contentDisposition(resultFileName))
+  res
+    .type('csv')
+    .set('Content-Disposition', contentDisposition(resultFileName))
 
-    pipeline(geocodedStream, res, err => {
-      if (err) {
-        res.destroy()
-        console.log(JSON.stringify({
-          ...logFinished(logObject),
-          status: 'failed',
-          error: err.message
-        }))
-        console.log(err)
-        return
-      }
+  try {
+    await pipeline(geocodedStream, res)
 
-      console.log(JSON.stringify({
-        ...logFinished(logObject),
-        status: 'completed'
-      }))
-    })
-  })
-})
+    console.log(JSON.stringify({
+      ...logFinished(logObject),
+      status: 'completed'
+    }))
+  } catch (error) {
+    res.destroy()
+
+    console.log(JSON.stringify({
+      ...logFinished(logObject),
+      status: 'failed',
+      error: error.message
+    }))
+
+    console.log(error)
+  }
+}))
 
 app.listen(process.env.PORT || 5000)
