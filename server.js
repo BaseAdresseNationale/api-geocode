@@ -1,13 +1,17 @@
-require('dotenv').config()
+/* eslint import/no-unassigned-import: off */
+import 'dotenv/config.js'
 
-const {pipeline} = require('stream')
-const {uniqueId} = require('lodash')
-const express = require('express')
-const cors = require('cors')
-const morgan = require('morgan')
-const multer = require('multer')
-const contentDisposition = require('content-disposition')
-const {geocodeCsvFile} = require('./lib/geocode-csv')
+import {pipeline} from 'node:stream'
+import process from 'node:process'
+
+import {uniqueId} from 'lodash-es'
+import express from 'express'
+import cors from 'cors'
+import morgan from 'morgan'
+import multer from 'multer'
+import contentDisposition from 'content-disposition'
+
+import {geocodeCsvFile} from './lib/geocode-csv.js'
 
 const app = express()
 const upload = multer()

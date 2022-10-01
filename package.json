@@ -9,6 +9,7 @@
   "publishConfig": {
     "access": "public"
   },
+  "type": "module",
   "scripts": {
     "lint": "xo",
     "start": "node server"
@@ -24,19 +25,24 @@
     "iconv-lite": "^0.6.3",
     "into-stream": "^5.1.1",
     "jschardet": "^3.0.0",
-    "lodash": "^4.17.21",
+    "lodash-es": "^4.17.21",
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
     "pumpify": "^2.0.1"
   },
   "devDependencies": {
-    "xo": "^0.25.3"
+    "xo": "^0.52.3"
   },
   "xo": {
     "semicolon": false,
     "space": 2,
     "rules": {
-      "unicorn/prefer-string-slice": "off"
+      "unicorn/prevent-abbreviations": "off",
+      "unicorn/text-encoding-identifier-case": "off",
+      "comma-dangle": [
+        "error",
+        "never"
+      ]
     }
   },
   "engines": {
