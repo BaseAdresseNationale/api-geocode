@@ -21,7 +21,6 @@
     "csv-write-stream": "^2.0.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "get-stream": "^5.1.0",
     "iconv-lite": "^0.5.0",
     "into-stream": "^5.1.1",
     "jschardet": "^3.0.0",
