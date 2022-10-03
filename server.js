@@ -18,7 +18,7 @@ import errorHandler from './lib/error-handler.js'
 const app = express()
 const upload = multer()
 
-app.use(cors())
+app.use(cors({origin: true}))
 
 if (process.env.NODE_ENV !== 'production') {
   app.use(morgan('dev'))
