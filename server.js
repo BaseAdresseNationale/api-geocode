@@ -12,6 +12,7 @@ import multer from 'multer'
 import contentDisposition from 'content-disposition'
 
 import {geocodeCsvFile} from './lib/geocode-csv.js'
+import {geocode} from './lib/addok.js'
 import w from './lib/w.js'
 import errorHandler from './lib/error-handler.js'
 
@@ -93,6 +94,11 @@ app.post('/search/csv', upload.single('data'), w(async (req, res) => {
 
     console.log(error)
   }
+}))
+
+app.get('/search', w(async (req, res) => {
+  const result = await geocode(req.query)
+  res.send(result)
 }))
 
 app.use(errorHandler)
