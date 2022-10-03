@@ -30,3 +30,9 @@ test('prepareQuery / pop values', t => {
     q: 'bar'
   })
 })
+
+test('prepareQuery / special string values', t => {
+  t.deepEqual(prepareQuery({
+    q: 'undefined'
+  }), {})
+})
