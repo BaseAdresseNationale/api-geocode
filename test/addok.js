@@ -22,3 +22,11 @@ test('prepareQuery / full', t => {
     autocomplete: '1'
   })
 })
+
+test('prepareQuery / pop values', t => {
+  t.deepEqual(prepareQuery({
+    q: ['foo', 'bar']
+  }), {
+    q: 'bar'
+  })
+})
