@@ -13,6 +13,7 @@ import contentDisposition from 'content-disposition'
 
 import {geocodeCsvFile} from './lib/geocode-csv.js'
 import w from './lib/w.js'
+import errorHandler from './lib/error-handler.js'
 
 const app = express()
 const upload = multer()
@@ -93,5 +94,7 @@ app.post('/search/csv', upload.single('data'), w(async (req, res) => {
     console.log(error)
   }
 }))
+
+app.use(errorHandler)
 
 app.listen(process.env.PORT || 5000)
