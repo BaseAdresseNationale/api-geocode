@@ -19,6 +19,8 @@ import errorHandler from './lib/error-handler.js'
 const app = express()
 const upload = multer()
 
+app.disable('x-powered-by')
+
 app.use(cors({origin: true}))
 
 if (process.env.NODE_ENV !== 'production') {
