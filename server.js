@@ -100,11 +100,13 @@ app.post('/search/csv', upload.single('data'), w(async (req, res) => {
 
 app.get('/search', w(async (req, res) => {
   const result = await geocode(req.query)
+  res.set('Cache-Control', 'max-age=900') // Allow user to cache the response up to 15 minutes
   res.send(result)
 }))
 
 app.get('/reverse', w(async (req, res) => {
   const result = await reverse(req.query)
+  res.set('Cache-Control', 'max-age=900') // Allow user to cache the response up to 15 minutes
   res.send(result)
 }))
 
