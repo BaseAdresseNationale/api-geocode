@@ -22,8 +22,8 @@
     "csv-parser": "^3.0.0",
     "csv-write-stream": "^2.0.0",
     "dotenv": "^16.0.3",
-    "express": "^4.18.1",
-    "got": "^12.5.1",
+    "express": "^4.18.2",
+    "got": "^12.5.3",
     "http-errors": "^2.0.0",
     "iconv-lite": "^0.6.3",
     "into-stream": "^7.0.0",
@@ -34,8 +34,8 @@
     "pumpify": "^2.0.1"
   },
   "devDependencies": {
-    "ava": "^4.3.3",
-    "xo": "^0.52.3"
+    "ava": "^5.1.0",
+    "xo": "^0.53.1"
   },
   "xo": {
     "semicolon": false,
