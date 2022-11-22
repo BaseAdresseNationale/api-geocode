@@ -259,15 +259,15 @@ acorn@^8.8.1:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.8.1.tgz#0a3f9cbecc4ec3bea6f0a80b66ae8dd2da250b73"
   integrity sha512-7zFpHzhnqYKrkYdUjF1HI1bzd0VygEGX8lFk4k5zVMqHEoES+P+7TKI+EvLO9WVMJ8eekdO0aDEK044xTXwPPA==
 
-addok-geocode-stream@^0.13.0:
-  version "0.13.0"
-  resolved "https://registry.yarnpkg.com/addok-geocode-stream/-/addok-geocode-stream-0.13.0.tgz#d1423e1f0dfac6e51a4a13381c19e512b902de5a"
-  integrity sha512-yix7Y+Y0GPdYULoxU9jhkxiwPJt4BFxo8XLx981mW8ey/MReejMyRnLPCjGPIo92Le7vqAY+q38NhKpXTU5gUw==
+addok-geocode-stream@^0.15.0:
+  version "0.15.0"
+  resolved "https://registry.yarnpkg.com/addok-geocode-stream/-/addok-geocode-stream-0.15.0.tgz#f222cdde8526f3fab732b70e9c0773fd12c67b3c"
+  integrity sha512-FhKDH3NsSu4ZpfZ2yotyfu/N2Lotd6ZrV8bZrcayUC0fVXqDcfMkLpZ5WFa2CozTeiZpIBRFg8DfXmkwTLUdDw==
   dependencies:
     csv-parser "^3.0.0"
     csv-write-stream "^2.0.0"
     form-data "^4.0.0"
-    got "^12.5.1"
+    got "^12.5.3"
     iconv-lite "^0.6.3"
     jschardet "^3.0.0"
     lodash-es "^4.17.21"
@@ -275,7 +275,7 @@ addok-geocode-stream@^0.13.0:
     parallel-transform "^1.2.0"
     pumpify "^2.0.1"
     strip-bom-stream "^5.0.0"
-    yargs "^17.5.1"
+    yargs "^17.6.2"
 
 aggregate-error@^4.0.0:
   version "4.0.1"
@@ -1862,23 +1862,6 @@ globby@^13.1.2:
     ignore "^5.2.0"
     merge2 "^1.4.1"
     slash "^4.0.0"
-
-got@^12.5.1:
-  version "12.5.1"
-  resolved "https://registry.yarnpkg.com/got/-/got-12.5.1.tgz#0796191c61478273f4cdbeb19d358a75a54a008d"
-  integrity sha512-sD16AK8cCyUoPtKr/NMvLTFFa+T3i3S+zoiuvhq0HP2YiqBZA9AtlBjAdsQBsLBK7slPuvmfE0OxhGi7N5dD4w==
-  dependencies:
-    "@sindresorhus/is" "^5.2.0"
-    "@szmarczak/http-timer" "^5.0.1"
-    cacheable-lookup "^7.0.0"
-    cacheable-request "^10.2.1"
-    decompress-response "^6.0.0"
-    form-data-encoder "^2.1.2"
-    get-stream "^6.0.1"
-    http2-wrapper "^2.1.10"
-    lowercase-keys "^3.0.0"
-    p-cancelable "^3.0.0"
-    responselike "^3.0.0"
 
 got@^12.5.3:
   version "12.5.3"
@@ -4228,23 +4211,10 @@ yaml@^1.10.0:
   resolved "https://registry.yarnpkg.com/yaml/-/yaml-1.10.2.tgz#2301c5ffbf12b467de8da2333a459e29e7920e4b"
   integrity sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==
 
-yargs-parser@^21.0.0, yargs-parser@^21.1.1:
+yargs-parser@^21.1.1:
   version "21.1.1"
   resolved "https://registry.yarnpkg.com/yargs-parser/-/yargs-parser-21.1.1.tgz#9096bceebf990d21bb31fa9516e0ede294a77d35"
   integrity sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==
-
-yargs@^17.5.1:
-  version "17.6.0"
-  resolved "https://registry.yarnpkg.com/yargs/-/yargs-17.6.0.tgz#e134900fc1f218bc230192bdec06a0a5f973e46c"
-  integrity sha512-8H/wTDqlSwoSnScvV2N/JHfLWOKuh5MVla9hqLjK3nsfyy6Y4kDSYSvkU5YCUEPOSnRXfIyx3Sq+B/IWudTo4g==
-  dependencies:
-    cliui "^8.0.1"
-    escalade "^3.1.1"
-    get-caller-file "^2.0.5"
-    require-directory "^2.1.1"
-    string-width "^4.2.3"
-    y18n "^5.0.5"
-    yargs-parser "^21.0.0"
 
 yargs@^17.6.2:
   version "17.6.2"
