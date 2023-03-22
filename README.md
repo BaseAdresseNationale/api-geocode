@@ -1,3 +1,6 @@
+**L'API Adresse utilise désormais https://github.com/livingdata-co/addok-server. Ce composant est donc abandonné.**
+
+
 # @etalab/api-geocode
 
 API haute performance de géocodage CSV, propulsée par [addok](https://github.com/addok/addok).
